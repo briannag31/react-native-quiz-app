@@ -1,14 +1,15 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import Title from '../components/title';
+import { writeScore } from '../assets/scoreStorage'
 
 const Results = ({navigation, route}) => { 
-    const {score, question} = route.params
+    const {score, question, questions} = route.params
    return (
     <View style={styles.container}>
          <ImageBackground source={{ uri: "https://i.imgur.com/lX6x82m.png" }} style={styles.image}
         resizeMode="cover">
-            <Text style={styles.scoreVal}>{score}/100</Text>
+            <Text style={styles.scoreVal}>{score}/100 {writeScore(`${score} / ${questions.length *10}`)} </Text>
             </ImageBackground>
         <View>
             <TouchableOpacity style={styles.button} onPress={() =>navigation.navigate("Home")}>

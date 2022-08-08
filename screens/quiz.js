@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-
+ 
 function shuffleArray(array){
     for(let i=array.length; i>0; i--){
         let j = Math.floor(Math.random() * (i + 1))
@@ -55,7 +55,7 @@ const Quiz = ({navigation}) => {
         }
         const handleResults = () =>{
             navigation.navigate("Results", {
-                score: score
+                score: score, questions:questions
             })
     }
     return(

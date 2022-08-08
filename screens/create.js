@@ -1,21 +1,55 @@
 import React, { useState } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native';
 
 const CreateQuestion = () => {
+
+  const [createQues, setCreateQues] = useState("")
+  const [incorrectAnswers, setIncorrectAnswers] = useState("")
+  const [correctAnswers, setCorrectAnswer] = useState("")
+
+  function create(){
+
+  }
   const [text, setText] = useState('');
-  return (
+return (
     <View style={styles.container}>
-      <TextInput
-        style={{height: 40}}
-        placeholder="Type here to translate!"
-        onChangeText={newText => setText(newText)}
-        defaultValue={text}
-      />
-      <Text style={{padding: 10, fontSize: 42}}>
-        {text.split(' ').map((word) => word && '🍕').join(' ')}
-      </Text>
+      <Text>Firebase crud!</Text> 
+
+      <TextInput placeholder="Question" onChangeText={(createQues) =>{setCreateQuestion(createQues)}} style={styles.textBoxes}></TextInput>
+      <TextInput placeholder="Correct Answer" onChangeText={(correctAnswers) =>{setCorrectAnswer(correctAnswers)}} style={styles.textBoxes}></TextInput>
+      <TextInput placeholder="Incorrect Answer" style={styles.textBoxes}></TextInput>
+      <TextInput placeholder="Incorrect Answer" style={styles.textBoxes}></TextInput>
+      <TextInput placeholder="Incorrect Answer" style={styles.textBoxes}></TextInput>
+
+
+      <TouchableOpacity onPress={create}>
+        <Text>Submit Data 
+          </Text> 
+          
+      </TouchableOpacity>      
+
     </View>
   );
+
+
+  
 }
 
 export default CreateQuestion;
+
+const styles = StyleSheet.create({
+  container: {  
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textBoxes: {
+    width: '90%', 
+    fontSize: 18,
+     padding: 12,
+      borderColor: 'gray', 
+    borderWidth: 0.2,
+     borderRadius: 10
+  }   
+});

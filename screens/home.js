@@ -9,7 +9,7 @@ const Home = ({navigation}) => (
        
         <ImageBackground source={{ uri: "https://i.imgur.com/PBQ75or.png" }} style={styles.image}
         resizeMode="cover">
-            <TouchableOpacity onPress={() => navigation.navigate("Choice")} style={styles.start}>
+            <TouchableOpacity onPress={() => navigation.navigate("SignUp")} style={styles.start}>
             <Text style={styles.startText}>Start</Text>
         </TouchableOpacity>
             </ImageBackground>
