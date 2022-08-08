@@ -35,5 +35,5 @@
 
 ## Features to add if time
 - add funtionality for user to create their own trivia questions
--link to backend server with firebase
+- link to backend server with firebase
 
