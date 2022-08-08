@@ -25,6 +25,13 @@
 ![Question Screen](https://i.imgur.com/y0MUoMp.png)
 ![Results Screen](https://i.imgur.com/e0zfd4v.png)
 
+## Model
+| Field | 
+|-------|
+|User First Name|
+|User Last Name|
+|User Username|
+|User's Recent Score|
 
 ## Features to add if time
 - add funtionality for user to create their own trivia questions
